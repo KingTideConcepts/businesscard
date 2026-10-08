@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#041822" />
+  <title>King Tide Concepts | Digital Business Card &amp; Portal</title>
+  <meta name="description" content="King Tide Concepts — Plain-language AI consulting and practical technology solutions for small and midsize businesses. Build momentum for what comes next." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="King Tide Concepts | AI &amp; IT Consulting" />
+  <meta property="og:description" content="Build momentum for what comes next. Save our contact card or explore King Tide Concepts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.kingtideconcepts.com" />
+  <meta property="og:image" content="https://www.kingtideconcepts.com/og.png" />
+
+  <!-- Brand Favicon -->
+  <link rel="icon" type="image/png" href="assets/trident-icon.png" />
+  <link rel="apple-touch-icon" href="assets/trident-icon.png" />
+
+  <!-- Brand Fonts (Matching kingtideconcepts.com: Cormorant Garamond + Manrope) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-intro-playing">
+  <!-- Ambient Bioluminescent Ocean Particle Canvas -->
+  <canvas id="tideCanvas" aria-hidden="true"></canvas>
+
+  <!-- Subtle Abyssal Radial Glows -->
+  <div class="ambient-glow ambient-glow--teal" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--gold" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       PHASE 1: "KING TIDE" RISING WAVE & TRIDENT INTRO ANIMATION (~2.2s)
+       ===================================================================== -->
+  <div id="introOverlay" class="intro-overlay" role="status" aria-label="King Tide Concepts intro animation">
+    <div class="intro-center">
+      <!-- Animated Emblem Frame -->
+      <div class="intro-emblem-wrap">
+        <!-- Golden Sun Halo SVG Stroke Animation -->
+        <svg class="intro-halo-svg" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+          <circle class="halo-track" cx="120" cy="120" r="102" />
+          <circle class="halo-draw" cx="120" cy="120" r="102" />
+          <circle class="halo-pulse" cx="120" cy="120" r="112" />
+        </svg>
+
+        <!-- Rising Trident Icon -->
+        <div class="intro-logo-mask">
+          <img src="assets/trident-icon.png" alt="King Tide Concepts Trident Emblem" class="intro-trident-img" />
+        </div>
+      </div>
+
+      <!-- Kinetic Brand Typography -->
+      <div class="intro-typography">
+        <div class="intro-brand-name">
+          <span class="intro-word intro-word--king">KING TIDE</span>
+          <span class="intro-word intro-word--concepts">CONCEPTS</span>
+        </div>
+        <p class="intro-tagline">
+          Build momentum for <em>what comes next.</em>
+        </p>
+      </div>
+
+      <!-- Tide Progress Bar -->
+      <div class="intro-progress" aria-hidden="true">
+        <div class="intro-progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Multi-Layered Rising King Tide Waves (SVG) -->
+    <div class="intro-waves" aria-hidden="true">
+      <svg class="wave-svg wave-svg--back" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,192L60,181.3C120,171,240,149,360,154.7C480,160,600,192,720,197.3C840,203,960,181,1080,165.3C1200,149,1320,139,1380,133.3L1440,128L1440,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-svg wave-svg--mid" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,133.3C672,128,768,160,864,176C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L0,320Z"></path>
+      </svg>
+      <svg class="wave-svg wave-svg--front" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path d="M0,224L80,208C160,192,320,160,480,165.3C640,171,800,213,960,218.7C1120,224,1280,192,1360,176L1440,160L1440,320L0,320Z"></path>
+      </svg>
+    </div>
+
+    <button id="skipIntroBtn" class="skip-intro-btn" type="button" aria-label="Skip intro animation">
+      Skip Intro <span>→</span>
+    </button>
+  </div>
+
+  <!-- =====================================================================
+       PHASE 2: INTERACTIVE DIGITAL BUSINESS CARD & PORTAL
+       ===================================================================== -->
+  <div class="page-shell">
+    <!-- Top Utility Bar -->
+    <header class="top-bar">
+      <a href="https://www.kingtideconcepts.com" class="top-brand" target="_blank" rel="noopener">
+        <span class="top-brand-dot"></span>
+        <span>Atlantic Coast · North Carolina</span>
+      </a>
+      <div class="top-actions">
+        <button id="replayIntroBtn" class="utility-pill" type="button" title="Replay the King Tide wave animation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+          <span>Replay Tide</span>
+        </button>
+        <button id="flipCardBtn" class="utility-pill utility-pill--gold" type="button" title="Flip business card">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+          <span id="flipCardBtnText">Flip Card</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Auto-Redirect Banner (Only visible when ?redirect=auto or ?redirect=true is in URL) -->
+    <div id="redirectBanner" class="redirect-banner" hidden>
+      <div class="redirect-banner-content">
+        <span class="redirect-pulse"></span>
+        <span>Opening <strong>kingtideconcepts.com</strong> in <b id="redirectCountdown">4</b>s…</span>
+      </div>
+      <button id="cancelRedirectBtn" class="redirect-cancel-btn" type="button">Stay on Card</button>
+    </div>
+
+    <!-- 3D Perspective Stage -->
+    <main class="card-stage" id="cardStage">
+      <div class="card-flipper" id="cardFlipper">
+
+        <!-- ===============================================================
+             CARD FRONT: INTERACTIVE EXECUTIVE DIGITAL CARD
+             =============================================================== -->
+        <section class="business-card business-card--front" aria-label="Digital Business Card Front">
+          <!-- Interactive Specular Glare Layer -->
+          <div class="card-glare" id="cardGlare" aria-hidden="true"></div>
+
+          <!-- Decorative Top Coastal Accent Line -->
+          <div class="card-tide-crest" aria-hidden="true"></div>
+
+          <!-- Brand Header -->
+          <div class="card-header">
+            <div class="logo-medallion">
+              <div class="logo-medallion-ring"></div>
+              <img src="assets/trident-icon.png" alt="King Tide Concepts Logo" class="logo-medallion-img" />
+            </div>
+            <div class="brand-lockup">
+              <div class="brand-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>AI &amp; IT Consulting</span>
+              </div>
+              <h1 class="brand-title">King Tide <span>Concepts</span></h1>
+              <p class="brand-subtitle">Build momentum for <em>what comes next.</em></p>
+            </div>
+          </div>
+
+          <!-- Dynamic Person / Team Member Profile Block -->
+          <div class="profile-card" id="profileBlock">
+            <div class="profile-avatar" id="profileAvatar" aria-hidden="true">
+              <span id="profileInitials">KT</span>
+            </div>
+            <div class="profile-info">
+              <div class="profile-badge-row">
+                <span class="profile-role-badge" id="profileRole">AI &amp; Technology Advisory</span>
+                <span class="profile-location" id="profileLocation">⌖ Wilmington, NC</span>
+              </div>
+              <h2 class="profile-name" id="profileName">King Tide Concepts</h2>
+              <p class="profile-bio" id="profileBio">
+                Helping small and midsize businesses solve bottlenecks, choose practical AI &amp; software, and build lasting momentum.
+              </p>
+            </div>
+          </div>
+
+          <!-- PROMINENT PRIMARY CTA: LAUNCH MAIN WEBSITE -->
+          <div class="primary-cta-group">
+            <a href="https://www.kingtideconcepts.com" id="mainWebsiteBtn" class="btn-launch-site" target="_blank" rel="noopener">
+              <div class="btn-launch-left">
+                <span class="btn-launch-kicker">Official Webpage</span>
+                <span class="btn-launch-label">Enter KingTideConcepts.com</span>
+              </div>
+              <span class="btn-launch-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <!-- Secondary High-Value Funnel Link: Business Momentum Assessment -->
+            <a href="https://www.kingtideconcepts.com/assessment" class="btn-assessment" target="_blank" rel="noopener">
+              <span class="assessment-dot"></span>
+              <span>Take the 3-Minute <strong>Business Momentum Assessment</strong></span>
+              <span class="assessment-arrow">→</span>
+            </a>
+          </div>
+
+          <!-- SAVE TO CONTACTS (.VCF) + SHARE ROW -->
+          <div class="contact-primary-row">
+            <button id="saveVcfBtn" class="btn-save-contact" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+              <span>Save to Contacts (.vcf)</span>
+            </button>
+            <button id="openQrModalBtn" class="btn-qr-share" type="button" title="Show QR Code or Share Link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              <span>QR / Share</span>
+            </button>
+          </div>
+
+          <!-- DIRECT ACTION GRID (Email, Call/Contact, LinkedIn, Instagram) -->
+          <div class="quick-actions-grid" aria-label="Direct contact and social links">
+            <a href="mailto:info@kingtideconcepts.com" id="actionEmail" class="quick-action-tile">
+              <span class="tile-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <span class="tile-label">Email</span>
+              <span class="tile-meta" id="actionEmailMeta">info@kingtide...</span>
+            </a>
+
+            <a href="https://www.kingtideconcepts.com/contact" id="actionCall" class="quick-action-tile">
+              <span class="tile-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </span>
+              <span class="tile-label" id="actionCallLabel">Connect</span>
+              <span class="tile-meta" id="actionCallMeta">Direct Inquiry</span>
+            </a>
+
+            <a href="https://www.linkedin.com/company/kingtideconcepts" id="actionLinkedin" class="quick-action-tile" target="_blank" rel="noopener">
+              <span class="tile-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </span>
+              <span class="tile-label">LinkedIn</span>
+              <span class="tile-meta">@kingtideconcepts</span>
+            </a>
+
+            <a href="https://www.instagram.com/kingtideconcepts" id="actionInstagram" class="quick-action-tile" target="_blank" rel="noopener">
+              <span class="tile-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </span>
+              <span class="tile-label">Instagram</span>
+              <span class="tile-meta">@kingtideconcepts</span>
+            </a>
+          </div>
+
+          <!-- Ambient Bottom Shoreline Wave inside Card -->
+          <div class="card-footer">
+            <span class="card-footer-motto">KTC <b>|</b> Built for momentum.</span>
+            <button type="button" class="card-flip-hint" id="cardFlipHintFront">
+              See how we work &amp; QR <span>↻</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ===============================================================
+             CARD BACK: 3 PILLARS OF KING TIDE + EMBEDDED TRIDENT QR
+             =============================================================== -->
+        <section class="business-card business-card--back" aria-label="Digital Business Card Back">
+          <div class="card-tide-crest" aria-hidden="true"></div>
+
+          <div class="back-header">
+            <div>
+              <p class="brand-eyebrow"><span class="eyebrow-line"></span><span>What We Do</span></p>
+              <h2 class="back-title">More capability.<br /><em>Less complexity.</em></h2>
+            </div>
+            <img src="assets/trident-icon.png" alt="" class="back-mini-logo" />
+          </div>
+
+          <!-- 3 Service Pillars from kingtideconcepts.com -->
+          <div class="pillars-list">
+            <div class="pillar-item">
+              <span class="pillar-num">01</span>
+              <div>
+                <h3>Chart the challenge</h3>
+                <p>We sit down with your team to pinpoint where your business is losing time, missing leads, or getting stuck.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-num">02</span>
+              <div>
+                <h3>Build the system</h3>
+                <p>We research practical AI tools, software, and process improvements—building a solution that fits how you actually run.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-num">03</span>
+              <div>
+                <h3>Put it into motion</h3>
+                <p>We test with real work, refine the workflow, and train your team so the momentum lasts.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded QR Showcase Box -->
+          <div class="back-qr-showcase">
+            <img src="assets/kingtide-qr.png" alt="King Tide Concepts Trident QR Code" class="back-qr-img" />
+            <div class="back-qr-copy">
+              <strong>Scan or share anytime</strong>
+              <p>Point any phone camera here to open this digital card or launch our website.</p>
+              <a href="https://www.kingtideconcepts.com/story" target="_blank" rel="noopener" class="back-story-link">
+                Read our coastal NC founder story <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <a href="https://www.kingtideconcepts.com" target="_blank" rel="noopener" class="back-site-cta">
+              kingtideconcepts.com <span>↗</span>
+            </a>
+            <button type="button" class="card-flip-hint" id="cardFlipHintBack">
+              <span>↺</span> Back to Contact Card
+            </button>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Team Member Personalized Card Switcher (?card=harry, ?card=mike, etc.) -->
+    <footer class="team-switcher-bar" aria-label="Select team member card">
+      <div class="switcher-label">
+        <span>Card Profile</span>
+        <code id="activeParamBadge">?card=ktc</code>
+      </div>
+      <div class="switcher-pills" id="teamSwitcherPills" role="tablist">
+        <button type="button" class="switcher-pill active" data-card="ktc" role="tab" aria-selected="true">Company</button>
+        <button type="button" class="switcher-pill" data-card="harry" role="tab" aria-selected="false">Harry Atwall</button>
+        <button type="button" class="switcher-pill" data-card="mike" role="tab" aria-selected="false">Mike Ramer</button>
+        <button type="button" class="switcher-pill" data-card="jordan" role="tab" aria-selected="false">Jordan Webb</button>
+        <button type="button" class="switcher-pill" data-card="joe" role="tab" aria-selected="false">Joe Soria</button>
+        <button type="button" class="switcher-pill" data-card="don" role="tab" aria-selected="false">Don Vasser</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- =====================================================================
+       QR CODE & SHARE MODAL
+       ===================================================================== -->
+  <div id="qrModal" class="modal-backdrop" hidden aria-modal="true" role="dialog" aria-labelledby="qrModalTitle">
+    <div class="modal-card">
+      <button id="closeQrModalBtn" class="modal-close" type="button" aria-label="Close modal">✕</button>
+      <p class="brand-eyebrow"><span class="eyebrow-line"></span><span>Share Digital Card</span></p>
+      <h3 id="qrModalTitle" class="modal-title">King Tide Concepts</h3>
+      <p id="qrModalSubtitle" class="modal-subtitle">Scan to open this card or copy the personalized link below.</p>
+
+      <div class="modal-qr-frame">
+        <img src="assets/kingtide-qr.png" alt="King Tide Concepts QR Code" class="modal-qr-img" />
+      </div>
+
+      <div class="modal-url-box">
+        <input type="text" id="shareUrlInput" class="modal-url-input" readonly value="https://www.kingtideconcepts.com" aria-label="Shareable URL" />
+        <button id="copyUrlBtn" class="modal-copy-btn" type="button">Copy Link</button>
+      </div>
+
+      <div class="modal-actions">
+        <button id="nativeShareBtn" class="btn-native-share" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          <span>Share via Phone…</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast" role="status" aria-live="polite" hidden>
+    <span class="toast-dot"></span>
+    <span id="toastMessage">Saved to contacts!</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
